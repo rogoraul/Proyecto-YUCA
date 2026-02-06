@@ -1,21 +1,12 @@
-# Proyecto-YUCA
-
 # Proyecto YUCA: Clasificación de Enfermedades en Hojas de Yuca mediante Deep Learning
 
-**Asignatura:** Aprendizaje Profundo (Deep Learning)  
-**Entrega:** Fase 1 - Selección del problema, Datos y Estado del Arte  
-**Estado:** En desarrollo
+**Asignatura:** Aprendizaje Profundo 
 
 ## 1. Descripción del Problema
 
-La yuca (Cassava) es la segunda fuente más importante de carbohidratos en África, un cultivo vital para la seguridad alimentaria de más de 500 millones de personas. Sin embargo, el 80% de los cultivos domésticos están amenazados por enfermedades virales que son difíciles de distinguir a simple vista por agricultores no expertos.
+La yuca (Cassava) es la segunda fuente más importante de carbohidratos en África, un cultivo que es vital para la seguridad alimentaria de más de 500 millones de personas. Sin embargo, el 80% de los cultivos domésticos están amenazados por enfermedades virales que son difíciles de distinguir a simple vista por agricultores no expertos.
 
-El objetivo de este proyecto es desarrollar un modelo de Deep Learning capaz de clasificar imágenes de hojas de yuca en 5 categorías (4 enfermedades y 1 categoría sana) para asistir en la detección temprana de patologías.
-
-El problema presenta desafíos técnicos interesantes para la asignatura:
-- **Similitud visual:** Las enfermedades presentan patrones visuales muy parecidos (manchas amarillas/marrones).
-- **Desbalanceo de clases:** La clase Cassava Mosaic Disease (CMD) es dominante.
-- **Ruido:** Las fotos están tomadas en condiciones de campo reales (iluminación variable, fondos complejos).
+El objetivo de este proyecto es desarrollar un modelo de Deep Learning capaz de clasificar imágenes de hojas de yuca en 5 categorías (4 que son enfermedades y 1 categoría sana) para asistir en la detección temprana de patologías.
 
 ## 2. Dataset
 
