@@ -19,28 +19,30 @@ Se utiliza el dataset **Concrete Crack Images for Classification**, disponible a
 
 
 ## 3. Estado del Arte
-La detección automática de grietas en hormigón ha sido ampliamente estudiada en la última década. A continuación, se presenta un análisis de los modelos más relevantes aplicados a este problema, contrastando arquitecturas diseñadas desde cero (Custom CNN) frente a estrategias de Transfer Learning.
-Es importante notar que, para el dataset específico utilizado en este proyecto (imágenes de 227x227 sin fondo complejo), la literatura reporta precisiones muy altas, situando el estado del arte por encima del 98%.
+La detección automática de grietas en hormigón ha sido ampliamente estudiada en la última década. A continuación, se presenta un análisis de los modelos más relevantes aplicados a este problema, contrastando arquitecturas diseñadas desde cero frente a estrategias de Transfer Learning.
 
-| Modelo / Arquitectura | Año | Técnica Principal | Metricas | Fuente / Referencia |
-| :--- | :--- | :--- | :--- | :--- |
-|Custom ConvNet | 2016 | CNN Propia (Supervisado) | F1: 89.6%, AUC: 0.96, Recall: 92.5%, Precision: 86.9% | Zhang et al. [1] |
-|CNN (Sliding Window) | 2017 | CNN con Ventana Deslizante | Accuracy: 97.9% | Cha et al. [2] |
-|VGG16 (Pre-trained) | 2018 | Transfer Learning (ImageNet) | 99.8% | Silva & Lucena [3] |
-|ResNet-50 / VGG19 | 2019 | Comparativa Transfer Learning | 99.9% | Özgenel (Autor del Dataset) [4] |
-|MobileNet | 2020 | CNN Ligera (Dispositivos Móviles) | 99.1% | D.J. Kim et al. [5] |
-|VGG16 (Modificado) | 2021 | Semantic Segmentation (FCN) | 98.7% (F1) | H.W. Golding et al. [6] |
+| Modelo / Arquitectura | Año | Dataset | Metricas | Referencia |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **ConvNet** | 2016 | 500 imagenes | F1: 89.6%, Recall: 92.5% | Zhang et al. [1] |
+| **CNN** con ventana deslizante | 2017 | 322 imagenes | Accuracy: 97.9% | Cha et al. [2] |
+| **VGG16 (Transfer)** | 2018 | 3500 imagenes | Accuracy: 92.27% | Silva & Lucena [3] |
+| **GoogleNet / VGG19/ VGG16** | 2018 | 40.000 imagenes | Accuracy: ~0,98% | **Özgenel [4]** |
+| **Lightweight CNN** | 2025 | 40.000 imagenes | **98.1%** | **Arici [5]** |
 
 ### Referencias Bibliográficas
-[1] Zhang, L., et al. (2016). "Road crack detection using deep convolutional neural network". IEEE International Conference on Image Processing (ICIP).
-[2] Cha, Y.J., et al. (2017). "Deep learning-based crack damage detection using convolutional neural networks". Computer-Aided Civil and Infrastructure Engineering.
-[3] Silva, W.R., & Lucena, D.S. (2018). "Concrete Cracks Detection Based on Deep Learning Image Classification". Proceedings of the XVIII International Conference on Structural Health Monitoring.
-[4] Özgenel, Ç.F. (2019). "Performance Comparison of Pre-Trained Convolutional Neural Networks for Concrete Crack Detection". International Conference on Artificial Intelligence and Data Processing (IDAP).
-[5] Kim, D.J., et al. (2020). "Concrete crack detection with light-weight deep learning models". Journal of Computing in Civil Engineering.
-[6] Golding, H.W., et al. (2021). "A deep learning based approach for crack detection in concrete images". Structural Health Monitoring.
 
+* **[1]** Zhang, Lei & Yang, Fan & Zhang, Yimin & Zhu, Ying. (2016). Road crack detection using deep convolutional neural network. 10.1109/ICIP.2016.7533052.
+  
+* **[2]** Cha, Youngjin & Choi, Wooram & Buyukozturk, Oral. (2017). Deep Learning-Based Crack Damage Detection Using Convolutional Neural Networks. Computer-Aided Civil and Infrastructure Engineering. 32. 361-378. 10.1111/mice.12263.
+  
+* **[3]** Silva, Wilson & Schwerz de Lucena, Diogo. (2018). Concrete Cracks Detection Based on Deep Learning Image Classification. Proceedings. 2. 5387. 10.3390/ICEM18-05387.
+  
+* **[4]** Özgenel, Çağlar & Sorguc, Arzu. (2018). Performance Comparison of Pretrained Convolutional Neural Networks on Crack Detection in Buildings. 10.22260/ISARC2018/0094.
+  
+* **[5]** Arici, Ayşe. (2025). Automatic Crack Detection on Concrete Surfaces Using Lightweight Deep Learning Models. Journal of Clinical Case Studies Reviews & Reports. 1-8. 10.47363/JCCSR/2025(7)364.
+  
 ### Métricas de Evaluación Seleccionadas
-Para este proyecto se reportarán las siguientes métricas, priorizando el **Recall**, dado que en ingeniería civil un Falso Negativo (no detectar una grieta real) es el error más peligroso.
+Para este proyecto se utilizarán las siguientes métricas, priorizando el **Recall**, dado que en ingeniería civil un Falso Negativo (no detectar una grieta real) es el error más grave y peligroso.
 
 * **Accuracy:** Precisión global.
 * **Recall (Sensibilidad):** Capacidad de encontrar todas las grietas reales.
